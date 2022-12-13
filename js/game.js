@@ -10,6 +10,12 @@ let level = 0;
       nextSequence();
     }
   });
+  $("body").on("click",()=>{
+    if(level=== 0){//check if it is initial start/restart
+      $("h2").text("Level "+ level);
+      nextSequence();
+    }
+  });
     $(".btn").on("click",function(){
       playSound(this.id);
       animatePress(this.id);
