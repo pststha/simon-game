@@ -10,7 +10,7 @@ let level = 0;
       nextSequence();
     }
   });
-  $("body").on("click",()=>{
+  $(".start").on("click",()=>{
     if(level=== 0){//check if it is initial start/restart
       $("h2").text("Level "+ level);
       nextSequence();
@@ -56,7 +56,7 @@ function animatePress(buttonName){
 function checkAnswer(recent){
   if (gamePattern[recent]!== userClickedPattern[recent]){//check the two arrays
       level = 0;
-      $("h2").text("Game over, Press Any Keyboard Key to Start");
+      $("h2").text("Game over, Press Any Keyboard Key or Click on START to play");
       gamePattern = [];
       userClickedPattern = [];
       playSound("wrong");
